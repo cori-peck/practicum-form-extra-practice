@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Practicum Form</title>
 </head>
@@ -14,29 +15,30 @@
     <div class="container">
         <form>
             <div class="form-control">
-                <input type="text" required>
-                <label>Name</label>
+                <input class="text" type="text">
+                <span class="focus-text" data-placeholder="Name"></span>
             </div>
 
             <div class="form-control">
-                <input type="text" required>
-                <label>Surname</label>
+                <input class="text" type="text">
+                <span class="focus-text" data-placeholder="Surname"></span>
             </div>
 
             <div class="form-control">
-                <textarea name="description"></textarea>
-                <label>Description</label>
+                <textarea class="text" type="text"></textarea>
+                <span class="focus-text" data-placeholder="Description"></span>
             </div>
 
-            <div class="form-control">
-                <input type="checkbox">
-                <label>With delivery</label>
-            </div>
+            <fieldset class="chkbox-container">
+                <legend>Would you like this delivered?</legend>
+                <input type="checkbox" id="star" name="delivery">
+                <label class="icon" for="star">&#9734;</label>
+                <label for="with">With Delivery</label>
 
-            <div class="form-control">
-                <input type="checkbox">
-                <label>Without delivery</label>
-            </div>
+                <input type="checkbox" id="star" name="delivery">
+                <label class="icon" for="star">&#9734;</label>
+                <label for="without">Without Delivery</label>
+            </fieldset>
 
             <button class="btn">Submit</button>
         </form>
